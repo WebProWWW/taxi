@@ -1,0 +1,325 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+trans(t=180)
+    transAll(t)
+
+
+html
+    height 100%
+    width 100%
+
+
+body
+    height 100%
+    width 100%
+    font-family 'Roboto' sans-serif
+    font-size 13px
+
+
+.section
+    mpd(0, 35px 0 20px)
+
+
+.header
+    mpd(0, 0 0 1px, flex)
+    position relative
+    flex-direction column
+    min-height 100%
+    background #FCBE37 url('../img/bg-home.jpg') 100% 50% no-repeat
+    background-size cover
+    &-row
+        mpd(0 auto, 0, flex)
+        position relative
+        flex-grow 1
+    &-col
+        display flex
+        flex-direction column
+        margin 0 0 -1px
+        padding 0 0 20px
+        background #FCBE37
+        background linear-gradient(to top, #FCBE37 0%, #FDA53A 100%)
+    &-txt-a
+        mpd(0 0 15px)
+        font-weight 300
+        font-size 18px
+        color white
+    &-txt-b
+        mpd(0 0 15px)
+        font-size 30px
+        font-weight 700
+        line-height 1
+        color white
+
+
+.footer
+    mpd()
+    position relative
+    background white url('../img/bg-footer.jpg') 0% 50% no-repeat
+    background-size auto auto
+    &-col
+        padding-top 35px
+        padding-bottom 20px
+        margin-left auto
+        background linear-gradient(to top, #FCBE37 0%, #FDA53A 100%)
+    &-soc
+        mpd(0 0 15px, 0, flex)
+        .soc-ln
+            margin 0 5px
+
+
+.bg-half-r, .bg-half-l
+    mpd()
+    position absolute
+    top 0px
+    left 0px
+    bottom 0px
+    right 0px
+    background linear-gradient(to top, #FCBE37 0%, #FDA53A 100%)
+    z-index 1
+.bg-half-cont
+    position relative
+    z-index 5
+
+
+
+.logo
+    mpd(0 0 15px, 15px 15px 0, flex)
+    box-sizing border-box
+    align-items flex-start
+    user-select none
+    cursor default
+    color white
+    font-weight 700
+    line-height 1
+    border-bottom 8px solid white
+    &-num
+        mpd(0 0 -7px)
+        font-size 46px
+    &-txt
+        mpd(5px 0 0 5px)
+        font-size 11px
+
+.logo
+    &-imgw
+        mpd(15px)
+        box-sizing border-box
+        position relative
+        &:after
+            content ''
+            position absolute
+            left -15px
+            right -15px
+            bottom 0px
+            height 10px
+            background white
+    &-img
+        mpd(0 0 5px 0)
+        max-width 100%
+
+
+
+.nav
+    mpd(0 0 10px, 0, flex)
+    flex-wrap wrap
+    &-ln
+        mpd(0 15px 5px)
+        resetLn(white, white, false, true)
+        text-align center
+        font-size 11px
+        font-weight 400
+    &-toggle
+        resetLn(white, white)
+        display block
+        position relative
+        font-size 20px
+    &-mobw
+        mpd(0, 15px, none)
+        position fixed
+        top 0px
+        left 0px
+        width 100%
+        height 100%
+        background #FDA53A
+        color white
+        z-index 300
+        overflow-y auto
+    &-mob
+        .nav-ln
+            margin 0
+            padding 15px
+            font-size 14px
+            font-weight 300
+            border-bottom 1px solid darken(#FDA53A, 13%)
+            border-top 1px solid #FCBE37
+            &:first-child
+                border-top none
+            &:last-child
+                border-bottom none
+
+
+
+.wall
+    mpd(0 0 15px, 15px 15px 1px)
+    background white
+    &-title
+        mpd(0 0 15px)
+        font-weight 400
+        font-size 1.2em
+
+
+
+.input
+    mpd(0 0 15px, 8px 15px)
+    b(1px, #D2D2D2)
+    box-sizing border-box
+    width 100%
+    background white
+    border-radius 0
+    line-height 1
+    font-size 0.9em
+    outline none
+    appearance none
+
+
+.button
+    mpd(0 0 15px, 9px 15px)
+    trans()
+    box-sizing border-box
+    width 100%
+    background #FF992D
+    font-size 0.9em
+    color white
+    font-weight 400
+    line-height 1
+    border none
+    outline none
+    appearance none
+    outline none
+    &:active, &:focus
+        outline none
+    &&:active
+        background #FF992D
+    &:hover
+        background #FFAE4A
+
+
+.title
+    mpd(0 0 15px)
+    font-size 18px
+    font-weight 700
+    color #811617
+
+
+.text
+    mpd(0 0 15px)
+    font-weight 400
+    font-size 1em
+
+
+
+.soc
+    mpd(0 0 15px, 0 10px, flex)
+    justify-content center
+    text-align center
+    &-ln
+        mpd(0 5px)
+        resetLn(white, white)
+        trans()
+        font-size 18px
+        text-shadow 0 0 15px alpha(#86161B, 30%)
+        &:hover
+            color #811617
+            text-shadow 0 0 15px white
+
+
+
+.gallery
+    mpd(0 0 30px)
+    b(1px, #F1F0F0)
+    box-sizing border-box
+    width 100%
+    height 300px
+    background-repeat no-repeat
+    background-position 50% 50%
+    background-size auto 8px
+    background-image url('../img/loader.svg')
+    &.loaded
+        background-size cover
+
+
+
+.bg-gray
+    background #F1F0F0
+
+
+.brown
+    color #811617
+
+
+.white
+    color white
+
+
+.bold
+    font-weight 700
+
+
+
+.video
+    &-16-9
+        mpd()
+        position relative
+        padding 56.25% 0 0
+    &-iframe
+        position absolute
+        top 0px
+        left 0px
+        width 100%
+        height 100%
+        z-index 10
+    &-post
+        mpd()
+        trans()
+        position absolute
+        top 0px
+        left 0px
+        width 100%
+        height 100%
+        z-index 20
+        opacity 1
+    &-overlay
+        mpd(0, 0, flex)
+        trans()
+        justify-content center
+        align-items center
+        position absolute
+        top 0px
+        left 0px
+        width 100%
+        height 100%
+        background alpha(black, 75%)
+        z-index 30
+    &-btn
+        mpd(0, 0, flex)
+        resetLn(white, #FCBE37)
+        trans()
+        align-items center
+        line-height 1
+        font-weight 300
+        font-size 1.8em
+    &-btn-icon
+        mpd(0 5px 0 0)
+        font-size 1.8em
+    &-16-9.playing
+        .video-overlay
+            background transparent
+        .video-post
+            opacity 0
+        .video-btn
+            visibility hidden
+
+
+
+.daterangepicker td.active, .daterangepicker td.active:hover
+    background #FDA53A
